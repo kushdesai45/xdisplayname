@@ -3,32 +3,48 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-
   const [lastName, setLastName] = useState('');
   const [firstName, setFirstName] = useState('');
-  const [fullName,setFullName] = useState('');
+  const [fullName, setFullName] = useState('');
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setFullName(firstName+" "+lastName);
+    setFullName(firstName + " " + lastName);
   }
 
   return (
     <div className="App">
-    <h1>Full Name Display</h1>
-      <form action="submit">
-      <div>
-      <span>First Name:</span> 
-        <input type="text" name="First Name" value={firstName} required onChange={(e)=>setFirstName(e.target.value)}/>
+      <h1>Full Name Display</h1>
+      <form onSubmit={onSubmit} className="form-container">
+        <div className="form-group">
+          <label>First Name:</label>
+          <input 
+            type="text" 
+            name="First Name" 
+            value={firstName} 
+            required 
+            onChange={(e) => setFirstName(e.target.value)} 
+          />
         </div>
-        <div>
-        <span>Last Name:</span> 
-        <input type="text" name="Last Name" value={lastName} required onChange={(e)=>setLastName(e.target.value)}/>
+        <div className="form-group">
+          <label>Last Name:</label>
+          <input 
+            type="text" 
+            name="Last Name" 
+            value={lastName} 
+            required 
+            onChange={(e) => setLastName(e.target.value)} 
+          />
         </div>
-        <button type="submit" onClick={onSubmit}>
-          Submit
-        </button>
-        {fullName && <p>Full Name: {fullName}</p>}
+        <div className="form-group">
+          <button type="submit">Submit</button>
+        </div>
+        {fullName && (
+          <div className="form-group">
+            <label>Full Name:</label>
+            <p>{fullName}</p>
+          </div>
+        )}
       </form>
     </div>
   );
