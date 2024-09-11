@@ -18,8 +18,7 @@ function App() {
       <form onSubmit={onSubmit} className="form-container">
         <div className="form-group">
           <label>First Name:</label>
-          <input 
-            type="text" 
+          <input
             name="First Name" 
             value={firstName} 
             required 
@@ -28,8 +27,7 @@ function App() {
         </div>
         <div className="form-group">
           <label>Last Name:</label>
-          <input 
-            type="text" 
+          <input
             name="Last Name" 
             value={lastName} 
             required 
