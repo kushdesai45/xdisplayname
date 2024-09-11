@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
     <h1>Full Name Display</h1>
-      <form action="submit" onSubmit={onSubmit}>
+      <form onSubmit={onSubmit}>
       <div>
       <span>First Name:</span> 
         <input type="text" name="First Name" value={firstName} required onChange={(e)=>setFirstName(e.target.value)}/>
