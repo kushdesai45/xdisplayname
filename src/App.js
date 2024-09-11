@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
     <h1>Full Name Display</h1>
-      <form onSubmit={onSubmit}>
+      <form action="submit">
       <div>
       <span>First Name:</span> 
         <input type="text" name="First Name" value={firstName} required onChange={(e)=>setFirstName(e.target.value)}/>
@@ -25,7 +25,7 @@ function App() {
         <span>Last Name:</span> 
         <input type="text" name="Last Name" value={lastName} required onChange={(e)=>setLastName(e.target.value)}/>
         </div>
-        <button type="submit" >
+        <button type="submit" onClick={onSubmit}>
           Submit
         </button>
         {fullName && <p>Full Name: {fullName}</p>}
