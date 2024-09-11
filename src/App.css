@@ -1,11 +1,7 @@
-.App {
-  text-align: center;
-}
-
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .form-group {
@@ -17,7 +13,7 @@
 
 label {
   margin-right: 10px;
-  width: 100px; /* To ensure all labels align */
+  /* width: 100px; */
   text-align: right;
 }
 
