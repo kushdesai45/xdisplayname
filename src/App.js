@@ -19,26 +19,16 @@ function App() {
       <form action="submit" onSubmit={onSubmit}>
       <div>
       <span>First Name:</span> 
-        <input type="text" name="First Name" value={firstName} required onChange={(e)=>{
-          const value = e.target.value;
-          if (/^[a-zA-Z]*$/.test(value)) {
-            setFirstName(value);
-          }
-        }}/>
+        <input type="text" name="First Name" value={firstName} required onChange={(e)=>setFirstName(e.target.value)}/>
         </div>
         <div>
         <span>Last Name:</span> 
-        <input type="text" name="Last Name" value={lastName} id="" required onChange={(e)=>{
-          const value = e.target.value;
-          if (/^[a-zA-Z]*$/.test(value)) {
-            setLastName(value);
-          }
-        }}/>
+        <input type="text" name="Last Name" value={lastName} required onChange={(e)=>setLastName(e.target.value)}/>
         </div>
         <button type="submit" >
           Submit
         </button>
-        <p>Full Name: {fullName}</p>
+        {fullName && <p>Full Name: {fullName}</p>}
       </form>
     </div>
   );
