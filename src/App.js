@@ -41,7 +41,7 @@ function App() {
         </div>
       </form>
       {fullName && (
-          <div className="form-group">
+          <div>
             <label>Full Name:</label>
             <p>{fullName}</p>
           </div>
