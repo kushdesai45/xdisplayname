@@ -41,11 +41,8 @@ function App() {
         </div>
       </form>
       {fullName && (
-          <div>
-            <label>Full Name:</label>
-            <p>{fullName}</p>
-          </div>
-        )}
+          <div>Full Name: {fullName}</div>
+      )}
     </div>
   );
 }
