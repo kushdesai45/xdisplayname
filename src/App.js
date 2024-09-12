@@ -39,13 +39,13 @@ function App() {
         <div className="form-group">
           <button type="submit">Submit</button>
         </div>
-        {fullName && (
+      </form>
+      {fullName && (
           <div className="form-group">
             <label>Full Name:</label>
             <p>{fullName}</p>
           </div>
         )}
-      </form>
     </div>
   );
 }
