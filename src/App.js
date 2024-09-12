@@ -19,6 +19,7 @@ function App() {
         <div className="form-group">
           <label>First Name:</label>
           <input
+            type="text"
             name="First Name" 
             value={firstName} 
             required 
@@ -28,6 +29,7 @@ function App() {
         <div className="form-group">
           <label>Last Name:</label>
           <input
+            type="text"
             name="Last Name" 
             value={lastName} 
             required 
